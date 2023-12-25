@@ -1,0 +1,8 @@
+$tabletWidth: 768px;
+$desktopWidth: 1366px;
+
+
+:export {
+  tabletWidth: $tabletWidth;
+  desktopWidth: $desktopWidth;
+}

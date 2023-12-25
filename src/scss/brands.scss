@@ -1,0 +1,110 @@
+@import "window-width";
+
+.brands {
+  border-top: 1px rgba(217, 255, 245, 1) solid;
+}
+
+.brands__swiper {
+  padding: 16px 16px 52px;
+  @media (min-width: $tabletWidth) {
+    padding: 24px;
+  }
+  @media (min-width: $desktopWidth) {
+    padding: 24px 32px;
+  }
+}
+
+.brands__swiper .swiper-pagination{
+  bottom: 12px !important;
+  @media (min-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.brands__title {
+  background: linear-gradient(90deg, rgba(248,248,248,0.01) 0%, rgba(248,248,248,0.01) 29%, rgba(255,255,255,1) 100%);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #7E7E82;
+  padding: 16px;
+  @media (min-width: $tabletWidth) {
+    padding: 16px 24px;
+  }
+  @media (min-width: $desktopWidth) {
+    padding: 16px 32px;
+  }
+}
+
+.brands__wrapper {
+  @media (min-width: $tabletWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    justify-content: space-between;
+    overflow: hidden;
+    max-height: 140px;
+    padding-bottom: 24px;
+  }
+  @media (min-width: $desktopWidth) {
+    padding-bottom: 32px;
+  }
+}
+
+.brands__wrapper.active {
+  max-height: 100%;
+}
+
+.brands__item{
+  display: flex;
+  height: 72px;
+  background-color: white;
+  border: 1px solid rgba(234, 234, 234, 1);
+  padding: 16px;
+  justify-content: space-between;
+  border-radius: 10px;
+  @media (min-width: $tabletWidth) {
+    width: 224px;
+  }
+  @media (min-width: $desktopWidth) {
+    width: 240px;
+    height: 72px;
+  }
+}
+
+.brands__item:hover .brands__circle-button {
+  opacity: 60%;
+}
+
+.brands__logo {
+  max-width: 50%;
+}
+
+.brands__circle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid hsl(342, 100%, 62%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("../img/dropdown.png");
+  transition: 0.2s;
+}
+
+.brands__show-more-button {
+  display: none !important;
+  @media (min-width: $tabletWidth) {
+    display: flex !important;
+    margin: 0 0 32px 0;
+  }
+  @media (min-width: $desktopWidth) {
+    margin: 0 0 50px 0;
+  }
+}
+

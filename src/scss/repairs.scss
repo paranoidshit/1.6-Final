@@ -1,0 +1,104 @@
+@import "window-width";
+
+.repairs {
+  border-top: 1px rgba(217, 255, 245, 1) solid;
+}
+
+.repairs__title {
+  background: linear-gradient(90deg, rgba(248,248,248,0.01) 0%, rgba(248,248,248,0.01) 29%, rgba(255,255,255,1) 100%);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #7E7E82;
+  padding: 16px;
+  @media (min-width: $tabletWidth) {
+    padding: 16px 24px;
+  }
+  @media (min-width: $desktopWidth) {
+    padding: 16px 32px;
+  }
+}
+
+.repairs__wrapper {
+  @media (min-width: $tabletWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+    row-gap: 16px;
+    justify-content: space-between;
+    max-height: 140px;
+    overflow: hidden;
+  }
+  @media (min-width: $desktopWidth) {
+    padding-bottom: 32px;
+  }
+}
+
+.repairs__wrapper.active {
+  @media (min-width: $tabletWidth) {
+    max-height: 100%;
+  }
+}
+
+.repairs__item {
+  color: rgba(27, 28, 33, 1);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  display: flex;
+  padding: 16px;
+  background: white;
+  border: 1px rgba(234,234,234,1) solid;
+  border-radius: 10px;
+  height: 160px;
+  @media (min-width: $tabletWidth) {
+    max-width: 230px;
+  }
+}
+
+.repairs__item:hover .repairs__circle-button {
+  opacity: 60%;
+}
+
+.repairs__circle-button {
+  margin: auto 0 0 auto !important;
+  border: 2px solid hsl(342, 100%, 62%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-image: url("../img/dropdown.png");
+  transition: 0.2s;
+}
+
+.repairs__show-more-button {
+  display: none;
+  @media (min-width: $tabletWidth) {
+    display: flex;
+    margin: 0 0 32px 0;
+  }
+  @media (min-width: $desktopWidth) {
+    margin: 0 0 50px 0;
+  }
+}
+
+.repairs__swiper .swiper-pagination{
+  bottom: 12px !important;
+  @media (min-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.repairs__swiper {
+  padding: 16px 16px 52px;
+  @media (min-width: $tabletWidth) {
+    padding: 24px;
+  }
+  @media (min-width: $desktopWidth) {
+    padding: 24px 32px;
+  }
+}

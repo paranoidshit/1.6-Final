@@ -1,0 +1,204 @@
+@import "window-width";
+@import "font";
+.prices {
+  border-top: 1px rgba(217, 255, 245, 1) solid;
+}
+
+.prices__title {
+  background: linear-gradient(90deg, rgba(248,248,248,0.01) 0%, rgba(248,248,248,0.01) 29%, rgba(255,255,255,1) 100%);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #7E7E82;
+  padding: 16px;
+  @media (min-width: $tabletWidth) {
+    padding: 16px 24px;
+  }
+  @media (min-width: $desktopWidth) {
+    padding: 16px 32px;
+  }
+}
+
+.prices__swiper {
+  padding: 16px 10px 44px;
+  @media (min-width: $tabletWidth) {
+    padding: 31px 34px 24px 24px;
+  }
+}
+
+.prices__swiper .swiper-pagination{
+  @media (min-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.prices__wrapper {
+  @media (min-width: $tabletWidth) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.prices__item-wrapper {
+  @media (min-width: $tabletWidth) {
+    padding: 0 16px;
+    background: white;
+  }
+}
+
+.prices__item-wrapper:nth-child(2) {
+  @media (min-width: $tabletWidth) {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.prices__item-wrapper:nth-last-child(-n+1) {
+  @media (min-width: $tabletWidth) {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.prices__item-wrapper:nth-last-child(-n+1) .prices__item {
+  @media (min-width: $tabletWidth) {
+    border-bottom: none;
+  }
+}
+
+
+.prices__item {
+  @media (max-width: $tabletWidth) {
+    border-radius: 5px;
+    padding: 16px;
+  }
+  display: grid;
+  background: white;
+  grid-template-areas:
+                "a a a a"
+                "b b b b"
+                "c c d d";
+  height: 200px;
+  grid-row-gap: 16px;
+  @media (min-width: $tabletWidth) {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    border-bottom: 1px rgba(234, 234, 234, 1) solid;
+  }
+}
+
+.prices__head-item {
+  display: none;
+  @media (min-width: $tabletWidth) {
+    width: 100%;
+    background-color: rgba(248, 248, 248, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 16px;
+  }
+}
+
+.prices__head-item .prices__placeholder {
+  width: 119px;
+}
+
+.prices__item-text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.20000000298023224px;
+  @media (min-width: $tabletWidth) {
+    width: 14%;
+    align-self: center;
+  }
+}
+
+.prices__item-text:nth-child(1) {
+  grid-area: a;
+  @media (min-width: $tabletWidth) {
+    width: 50%;
+  }
+}
+
+.prices__item-text:nth-child(2) {
+  grid-area: b;
+}
+
+.prices__item-text:nth-child(3) {
+  grid-area: c;
+}
+
+.prices__item-description {
+  color: rgba(126, 126, 130, 1);
+}
+
+.prices__item .prices__item-description {
+  @media (min-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+.prices__item-button {
+  grid-area: d;
+  display: flex;
+  align-content: center;
+  justify-self: end;
+  width: 119px;
+  height: 32px;
+  background: rgba(255, 62, 121, 1);
+  border-radius: 10px;
+  padding: 0 12px;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.15000000596046448px;
+  color: white;
+  background-image: url("../img/dropdown1.png");
+  background-position: center right 10px;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+  @media (min-width: $tabletWidth) {
+    align-self: center;
+  }
+}
+
+
+.prices__item-button:hover {
+  opacity: 60%;
+}
+
+.prices_bottom-text {
+  padding: 0 16px 25px;
+  font-size: 14px;
+  line-height: 20px;
+  @media (min-width: $tabletWidth) {
+    width: 421px;
+    padding: 0 24px 25px;
+  }
+}
+
+.prices_bottom-link {
+  padding: 0 24px 40px 16px;
+  font-weight: 500;
+  max-width: max-content;
+  transition: 0.2s;
+  @media (min-width: $tabletWidth) {
+    width: 421px;
+    padding: 0 24px 47px;
+  }
+}
+
+.prices_bottom-link:hover {
+  opacity: 60%;
+}
+
+.prices_bottom-link a {
+  background-image: url("../img/dropdown.png");
+  background-position: top 5px right;
+  background-repeat: no-repeat;
+  padding-right: 24px;
+}
+

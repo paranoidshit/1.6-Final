@@ -1,0 +1,87 @@
+@import "window-width";
+
+.article {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.article__description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $tabletWidth) {
+    padding: 0 16px 16px;
+  }
+}
+
+.article__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  max-height: 6em;
+  overflow: hidden;
+  gap: 16px;
+  width: 100%;
+}
+
+.article__image {
+  width: 100%;
+  height: auto;
+}
+
+.article__arrow_spoiler {
+  width: 7px;
+  height: 10px;
+}
+
+.article__show-more-button {
+  margin-top: 16px;
+}
+
+.article__text.active {
+  max-height: 100%;
+}
+
+@media (min-width: $tabletWidth) {
+
+
+  .article__text {
+    max-height: 160px;
+  }
+
+  .article {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 0 24px 30px;
+  }
+
+  .article__description {
+    margin: 0;
+  }
+
+  .article__image {
+    right: 0;
+    width: 360px;
+    height: 208px;
+  }
+
+}
+
+@media (min-width: $desktopWidth) {
+
+  .article {
+    padding: 0 32px 50px;
+  }
+
+  .article__image {
+    margin-left: auto;
+    width: 531px;
+    height: 307px;
+  }
+
+
+}

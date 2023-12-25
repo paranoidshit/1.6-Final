@@ -1,0 +1,51 @@
+.circle-btn {
+  height: 40px;
+
+  &__text {
+    margin-right: 8px;
+  }
+
+  &__svg {
+    fill: $color-main-pink;
+    transition: fill 0.2s ease-in-out;
+
+    &:hover {
+      fill: $color-hover-pink;
+    }
+  }
+
+  &--stroke {
+    stroke: $color-main-pink;
+    fill: none;
+    transition: fill 0.3s ease-in-out, stroke 0.1s ease-in-out;
+
+    &:hover {
+      stroke: transparent;
+      fill: $color-main-pink;
+
+      path {
+        fill: $color-white;
+      }
+    }
+
+    path {
+      fill: $color-main-pink;
+      transition: fill 0.1s ease-in-out, stroke 0.1s ease-in-out;
+    }
+  }
+
+  &--close {
+    @media (min-width: $screen-laptop) {
+      display: none;
+    }
+  }
+
+  &--close-outside {
+    @media (min-width: $screen-laptop) {
+      display: inline;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      transition-delay: 0.2s;
+    }
+  }
+}

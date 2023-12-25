@@ -1,0 +1,54 @@
+@import "window-width";
+@import "circle-button";
+
+.header {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px rgba(217, 255, 245, 1) solid;
+  background-color: white;
+
+  @media (min-width: $desktopWidth) {
+    display: none;
+  }
+}
+
+.header__left-part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__right-part {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__separator {
+  height: 32px;
+  border: 1px #EAEAEA solid;
+}
+
+.header__right-part .circle-button:nth-child(-n+3) {
+  display: none;
+
+  @media (min-width: $tabletWidth) {
+    display: block;
+  }
+}
+
+.header__left-part .header__separator {
+  @media (max-width: $tabletWidth) {
+    display: none;
+  }
+}
+
+
+
+
+
+

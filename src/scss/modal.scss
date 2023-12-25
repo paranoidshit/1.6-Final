@@ -1,0 +1,47 @@
+@import "circle-button";
+@import "window-width";
+
+.modal {
+  z-index: 50;
+  display: flex;
+  right: -320px;
+  width: 320px;
+  top: 0;
+  flex-direction: column;
+  height: 100vh;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
+  transition: 0.5s;
+  position: fixed;
+  border-left: 1px rgba(217, 255, 245, 1) solid;
+
+  @media (min-width: $tabletWidth) {
+    width: 440px !important;
+    right: -440px;
+    padding-top: 0;
+  }
+}
+
+.modal--active {
+  @media (max-width: $tabletWidth) {
+    width: 100%;
+  }
+  right: 0 !important;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+}
+
+.modal .circle-button {
+  @media (min-width: $tabletWidth) {
+    position: absolute;
+    top: 32px;
+    right: 0;
+  }
+}
+
+.modal--active .circle-button {
+  @media (min-width: $tabletWidth) {
+    position: absolute;
+    right: 473px;
+  }
+}

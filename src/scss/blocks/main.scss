@@ -1,0 +1,6 @@
+.main {
+  @media (min-width: $screen-laptop) {
+    display: flex;
+    flex-direction: column;
+  }
+}
