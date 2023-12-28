@@ -46,11 +46,11 @@
     row-gap: 16px;
     justify-content: space-between;
     overflow: hidden;
-    max-height: 160px;
-    padding-bottom: 24px;
+    max-height: 140px;
+    padding-bottom: 28px;
   }
   @media (min-width: $desktopWidth) {
-    padding-bottom: 32px;
+    padding-bottom: 28px;
   }
 }
 
